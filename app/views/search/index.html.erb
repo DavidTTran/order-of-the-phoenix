@@ -1,0 +1,10 @@
+<%= @house %> Members of the Order of the Phoenix
+
+<section class="members_list">
+  <% @members.each do |member| %>
+    Name: <%= member[:name] %>
+    Role: <%= if member[:role] ? member[:role]:"na" %>
+    House: <%= member[:house] %>
+    Patronus: <%= if member[:patronus] ? member[:patronus]:"na" %>
+  <% end %>
+</section>
