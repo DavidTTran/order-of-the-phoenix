@@ -12,6 +12,7 @@ class HarryPotterApi
 
   def parse_phoenix
     conn = @connection.get("https://www.potterapi.com/v1/characters")
-    response = JSON.parse(conn.body, symbolize_names: true)
+    members = JSON.parse(conn.body, symbolize_names: true)
+    # members.map { |member| Members.new(member) }
   end
 end

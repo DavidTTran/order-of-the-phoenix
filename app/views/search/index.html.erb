@@ -1,10 +1,11 @@
 <%= @house %> Members of the Order of the Phoenix
+<%= @members.count %> total members of the Order of the Phoenix
 
 <section class="members_list">
   <% @members.each do |member| %>
     Name: <%= member[:name] %>
-    Role: <%= if member[:role] ? member[:role]:"na" %>
+    Role: <%= member[:role] if member[:role] %>
     House: <%= member[:house] %>
-    Patronus: <%= if member[:patronus] ? member[:patronus]:"na" %>
+    Patronus: <%= member[:patronus] if member[:patronus] %>
   <% end %>
 </section>
