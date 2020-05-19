@@ -4,7 +4,7 @@ describe "as a user" do
   it "can search for members of a house" do
     visit "/"
     click_on "Search For Members"
-    expect(page).to have_content("Gryffindor Members of the Order of the Phoenix")
+    expect(page).to have_content("Members of the Order of the Phoenix")
     expect(page).to have_content("21 Gryffindor Members")
   end
 
