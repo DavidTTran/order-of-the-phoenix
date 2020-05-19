@@ -8,8 +8,8 @@
 <section class="members_list">
   <% @members.each do |member| %>
     Name: <%= member[:name] %><br>
-    Role: <%= member[:role] if member[:role] %><br>
+    Role: <%= member[:role] ? member[:role] : "NA" %><br>
     House: <%= member[:house] %><br>
-    Patronus: <%= member[:patronus] if member[:patronus] %><br><br>
+    Patronus: <%= member[:patronus] ? member[:patronus] : "NA" %><br><br>
   <% end %>
 </section>
