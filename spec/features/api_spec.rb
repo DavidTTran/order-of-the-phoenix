@@ -10,6 +10,9 @@ describe "as a user" do
   it "can view detailed info for each member" do
     visit "/"
     click_on "Search For Members"
-    
+    expect(page).to have_content("Name: Harry Potter")
+    expect(page).to have_content("Role: student")
+    expect(page).to have_content("House: Gryffindor")
+    expect(page).to have_content("Patronus: stag")
   end
 end
